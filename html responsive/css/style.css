@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden ;
+    background: linear-gradient(285deg, rgb(231 80 118) 17%, rgb(125 172 193) 83% 100%),url();
+}
+body img{
+    object-fit: contain;
+}
+h1,h2{
+    color: blue;
+}
+img{
+    border-radius: 5px;
+}
+nav{
+    border-bottom: 0.5vh solid;
+}
+nav a{
+    color: black;
+    text-decoration: none;
+}
+nav a:hover{
+    color:white;
+}
+#logo{
+    float: left;
+    margin:1vh 2vh;
+}
+.poster{
+    width: 100%;
+    padding:0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;  
+    overflow: auto;  
+}
+#posterImg {
+    float: left;
+    padding: 1.5vh 2.5vh;
+    width: 40%;
+}
+
+#posterContent{
+    padding:8vh 12vh;
+}
+
+.feature-sec{
+    margin: auto ;
+    text-align: center;
+}
+.feature-sec img{
+    width: 70%;
+}
+.feature-sec p{
+    padding: 0 2em;
+}
+.spec_sec{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    max-width: 1640px;
+    margin: 0 auto;
+}
+.spec_child{
+    width:100%;
+    padding: auto; 
+}
+.spec_child table ,td{
+    border: 3px solid black;
+}
+.spec_child table{
+    border-collapse: collapse;
+    width:90%;
+}
+.media-sec{
+    text-align: center;
+    width: 100%;
+    height: 50%;
+}
+
+input[type=text],rc select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: medium;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: contents;
+}
+
+input[type=submit], button{
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  width: 5rem;
+  margin: 0 1rem;  
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+.enquiry-form{
+    border-radius: 5px;
+    padding:0 4rem  ;
+    height: 33rem;
+    
+}
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+#country{
+    float: left;
+    width: 70%;
+    height: 3rem;
+    font-size: medium;
+    border-radius: 5px;
+}
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.imagesGallery{
+    text-align: center;
+}
+.moreImages{
+    object-fit: fill;
+    width:30%;
+    height: 22em;
+    margin: auto;
+}
+#checkbox{
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.Reviews{
+    text-align: center;
+    width: 100%;
+    height: 50%;
+}
+.videoframe{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.videoframe iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+}
