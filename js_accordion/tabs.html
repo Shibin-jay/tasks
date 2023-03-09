@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    [data-tab-content]{
+        display: none;
+    }
+    .active[data-tab-content]{
+        display: block;
+    }
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    .tabs{
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        margin: 0;
+        padding: 25px;
+        border: 2px solid black;
+        background: linear-gradient(90deg, rgba(78,128,38,1) 0%, rgba(77,144,72,1) 31%, rgba(67,133,168,1) 57%, rgba(58,198,178,0.9724264705882353) 100%);
+    }
+    .tab{
+        cursor: pointer;
+        padding: 10px 50px ;
+        color: whitesmoke;
+    }
+    .tab.active{
+        background-color: rgb(154, 50, 223);
+    }
+    .tab:hover{
+        background-color: #aaa;
+    }
+    .tab-content{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+</style>
+<body>
+    <ul class="tabs">
+        <li data-tab-target="#tab1" class=" tab active">Tab 1</li>
+        <li data-tab-target="#tab2" class="tab">Tab 2</li>
+        <li data-tab-target="#tab3" class="tab">Tab 3</li>
+        <li data-tab-target="#tab4" class="tab">Tab 4</li>
+    </ul>
+    <div class="tab-content">
+        <div id="tab1" data-tab-content class="active">
+            <h1>tab 1</h1>
+            <p>tab 1 is active</p>
+        </div>
+        <div id="tab2" data-tab-content class="">
+            <h1>tab 2</h1>
+            <p>tab 2 is active</p>
+        </div>
+        <div id="tab3" data-tab-content class="">
+            <h1>tab 3</h1>
+            <p>tab 3 is active</p>
+        </div>
+        <div id="tab4" data-tab-content class="">
+            <h1>tab 4</h1>
+            <p>tab 4 is active</p>
+        </div>
+
+    </div>
+    <script>
+        const tabs= document.querySelectorAll('[data-tab-target]')
+        const tabContents=document.querySelectorAll('[data-tab-content]')
+
+        tabs.forEach( tab =>{
+            tab.addEventListener('click', ()=>{
+                const target= document.querySelector(tab.dataset.tabTarget)
+                tabContents.forEach(tabContent =>{
+                    tabContent.classList.remove('active')
+                })
+                tabs.forEach(tab => {
+                    tab.classList.remove('active')
+                })
+                tab.classList.add('active')
+                target.classList.add('active')
+            })
+        })
+    </script>
+</body>
+</html>

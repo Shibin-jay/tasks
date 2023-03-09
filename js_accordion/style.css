@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+.accordion-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #3a65a9;
+}
+.accordion{
+    width: 800px;
+}
+.accordion .contentBox{
+    position: relative;
+    margin: 10px 20px;
+}
+.accordion .contentBox .label{
+    position: relative;
+    padding: 10px;
+    background-color:#79e273 ;
+    color: white;
+    cursor: pointer;
+}
+.accordion .contentBox .label::before{
+    content: '+';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+.accordion .contentBox.active .label::before{
+    content: '-';
+}
+.accordion .contentBox .content{
+    position: relative;
+    background: #fff;
+    height: 0;
+    overflow: hidden;
+    transform: 1s;
+    overflow-y: auto;
+    transition: ease-in-out 0.5s;
+}
+.accordion .contentBox.active .content{
+    height: 300px;
+    transition: ease-in-out 0.5s;
+}
