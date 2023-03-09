@@ -15,10 +15,23 @@ const tabs= document.querySelectorAll('[data-tab-target]')
                 target.classList.add('active')
             })
         })
-// accordion 
-const accordion = document.getElementsByClassName('contentBox');
-for (let i = 0; i < accordion.length; i++) {
-    accordion[i].addEventListener('click',function() {
-        this.classList.toggle('active')        
-    })
+
+        // Accordion 
+var accordion = document.getElementsByClassName("contentBox");
+var panel = document.getElementsByClassName('content');
+
+for (var i = 0; i < accordion.length; i++) {
+    accordion[i].onclick = function() {
+        var setClasses = !this.classList.contains('active');
+        setClass(accordion, 'active', 'remove');
+
+        if (setClasses) {
+            this.classList.toggle("active");
+        }
+    }
+}
+function setClass(els, className, fnName) {
+    for (var i = 0; i < els.length; i++) {
+        els[i].classList[fnName](className);
+    }
 }
