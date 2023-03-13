@@ -1,0 +1,77 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background-image: linear-gradient(to right top, #000000, #1b0c14, #291425, #341c3c, #362856, #363d73, #2c538f, #006baa, #008fc6, #00b3db, #00d8e9, #5ffbf1);
+
+}
+.navbar-brand {
+	font-size: 28px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.navbar-nav .nav-item .nav-link {
+	font-weight: bold;
+}
+.navbar-nav .nav-item.active .nav-link {
+	color: white;
+	
+	
+}
+.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+nav{
+	background-image: linear-gradient(to right, #8a7de0, #ef72ba, #ff887f, #ffb956, #c3e96f);
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-auto-rows: 300px;
+	grid-gap: 1rem;
+}
+.card {
+	position: relative;
+	overflow: hidden;
+}
+.card:hover .overlay {
+	opacity: 1;
+}
+.card-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+.card-title {
+	margin: 0;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+.card-text {
+	margin: 0;
+	font-size: 1rem;
+}
